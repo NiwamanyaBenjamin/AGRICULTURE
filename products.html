@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Green Tree Aid Dealers</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div id="cart">
+            Cart: <span id="cart-count">0</span> items
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="product">
+            <img src="images/fertilizers.jpg" alt="Tree Fertilizers" />
+            <h2>Tree Fertilizers</h2>
+            <p>Price: UGX 5,000</p>
+            <button onclick="addToCart('Tree Fertilizers')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="Images/tree seedings.jpg" alt="Tree Seedlings" />
+            <h2>Tree Seedlings</h2>
+            <p>Price: UGX 500</p>
+            <button onclick="addToCart('Tree Seedlings')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="Images/plating materials.jpg" alt="Planting Materials" />
+            <h2>Planting Materials</h2>
+            <p>Price: UGX 20,000</p>
+            <button onclick="addToCart('Planting Materials')">Add to Cart</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GreenLeaf Organics dealers</p>
+    </footer>
+
+    <script>
+        let count = 0;
+        function addToCart(item) {
+            count++;
+            document.getElementById("cart-count").innerText = count;
+            alert(item + " added to cart!");
+        }
+    </script>
+</body>
+</html>
