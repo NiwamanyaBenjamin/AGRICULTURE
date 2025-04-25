@@ -5,6 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products - Green Tree Aid Dealers</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .product {
+            background: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .product img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product h2 {
+            margin: 15px 0 10px;
+            color: #2a7d2e;
+        }
+
+        .product p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .product button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #2a7d2e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #256826;
+        }
+
+        #cart {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,27 +86,30 @@
         <div class="product">
             <img src="images/fertilizers.jpg" alt="Tree Fertilizers" />
             <h2>Tree Fertilizers</h2>
-            <p>Price: UGX 5,000</p>
+            <p>Boost your trees with our high-quality organic fertilizers designed for faster and healthier growth.</p>
+            <p><strong>Price:</strong> UGX 5,000</p>
             <button onclick="addToCart('Tree Fertilizers')">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="images/tree seedings.jpg" alt="Tree Seedlings" />
             <h2>Tree Seedlings</h2>
-            <p>Price: UGX 500</p>
+            <p>Get strong, disease-resistant seedlings ready for planting — the best start to a greener future.</p>
+            <p><strong>Price:</strong> UGX 500</p>
             <button onclick="addToCart('Tree Seedlings')">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="images/plating materials.jpg" alt="Planting Materials" />
             <h2>Planting Materials</h2>
-            <p>Price: UGX 20,000</p>
+            <p>Everything you need for efficient planting — tools, soil enhancers, and eco-friendly kits.</p>
+            <p><strong>Price:</strong> UGX 20,000</p>
             <button onclick="addToCart('Planting Materials')">Add to Cart</button>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 GreenLeaf Organics dealers</p>
+        <p>&copy; 2025 Green Tree Aid Dealers</p>
     </footer>
 
     <script>
